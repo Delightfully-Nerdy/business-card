@@ -9,16 +9,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.grey[900],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage('images/1.jpg'),
+                backgroundImage: AssetImage('images/2.png'),
               ),
               Text(
-                'Dalitso Kasonde',
+                'Fred Ikasaya Samani',
                 style: TextStyle(
                   fontSize: 40.0,
                   fontFamily: 'Pacifico',
@@ -32,11 +33,51 @@ class MyApp extends StatelessWidget {
                   fontSize: 20.0,
                   letterSpacing: 2.5,
                   fontFamily: 'Source Sans Pro',
-                  color: Colors.teal.shade100,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              // backgroundColor: Colors.red,
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.grey.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '+260 976 746 458 ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'samanifred@gmail.com ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
